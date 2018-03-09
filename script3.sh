@@ -18,4 +18,17 @@ unset UNIX[4]
 
 echo ${UNIX[*]}
 
+echo "Now replacing Ubuntu with SCO Unix"
+echo ${UNIX[@]/2/SCOUnix}
 
+echo "Now adding elements AIX and HP-UX in the array"
+echo ${UNIX[@]AIX HP AUX}
+
+echo "After removing 3rd element from array UNIX"
+unset ${UNIX[2]}
+
+echo "After removing array LINUX"
+unset LINUX
+
+echo "After removing array UNIX"
+unset UNIX

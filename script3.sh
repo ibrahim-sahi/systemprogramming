@@ -13,22 +13,29 @@ echo "Length of element on index 2 is: "
 echo ${#UNIX[2]}
 
 echo "Extracting 2 elements from index 3 onwards"
-unset UNIX[3]
-unset UNIX[4]
-
-echo ${UNIX[*]}
+echo ${unix[@]:2:4}
 
 echo "Now replacing Ubuntu with SCO Unix"
-echo ${UNIX[@]/2/SCOUnix}
+echo ${unix[@]/Ubuntu/'SCO Unix'}
 
 echo "Now adding elements AIX and HP-UX in the array"
-echo ${UNIX[@]AIX HP AUX}
+unix=(${unix[@]} 'AIX' 'HP-UX')
+	echo ${unix[*]}
 
 echo "After removing 3rd element from array UNIX"
 unset ${UNIX[2]}
+echo ${unix[@]}
 
-echo "After removing array LINUX"
-unset LINUX
+echo "New array LINUX"
+	linux=(${unix[@]})
+	echo ${linux[*]}
 
-echo "After removing array UNIX"
-unset UNIX
+	echo "New array BASH"
+	bash=(${unix[@]} ${linux[@]} )
+	echo ${bash[*]}
+
+echo "Removing array LINUX"
+unset LINUX[*]
+
+echo "Removing array UNIX"
+unset UNIX[*]

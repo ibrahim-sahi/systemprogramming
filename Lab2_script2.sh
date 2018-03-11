@@ -14,5 +14,5 @@ then
 	
 	done 
 else
-	echo "No argument"
+	echo "No argument/s"
 fi

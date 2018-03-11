@@ -1,10 +1,10 @@
 #!/bin/bash
 if [ $# = 0 ]
 then
-	echo "No arguments were given!"
+	echo "None of the arguments were entered!"
 elif [ $# -gt 6 ]
 then
-	echo "Too many arguments were given!"
+	echo "More than 6 arguments were entered!"
 elif [ $# = 1 ]
 then
 	echo "Printing table"
@@ -44,11 +44,11 @@ then
 		num2="$num2 + 1"
 	done
 	else 
-		echo "Invalid argument !"
+		echo "Invalid argument/s!"
 	fi
 elif [ $# = 2 ]
 then
-	echo "Missing thrid argument!"
+	echo "Missing 3rd argument!"
 
 
 elif [ $# = 5 ]
@@ -66,7 +66,7 @@ then
 		num2="$num2 + 1"
 	done
 	else
-		echo "Invalid argument"
+		echo "Invalid argument/s"
 	fi
 elif [ $# = 6 ]
 then
@@ -83,7 +83,7 @@ then
 		num2="$num2 - 1"
 	done
 	else
-		echo "Invalid argument"
+		echo "Invalid argument/s"
 	fi
 fi
 

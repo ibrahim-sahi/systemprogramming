@@ -1,5 +1,5 @@
 #!/bin/bash
-showAllOwner ()
+showAllOwners ()
 {
 	echo "File name :File type : owner"
 	for filename in `ls ~`
@@ -14,10 +14,10 @@ showAllOwner ()
 
 if [ $# = 1 ]
 then 
-	showAllOwner $1
+	showAllOwners $1
 elif [ $# = 0 ]
 then
-echo "no arguments were given"
+echo "No arguments were entered"
 else
-echo "too many arguments were given"
+echo "Too many arguments were entered"
 fi
